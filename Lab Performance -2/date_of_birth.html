@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date of Birth </title>
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["dob"].value;
+            let parts = x.split("/");
+            let day = parseInt(parts[0]);
+            let month = parseInt(parts[1]);
+            let year = parseInt(parts[2]);
+            if (parts.length !== 3 || day < 1 || day > 31 || month < 1 || month > 12 || year < 1900 || year > 2016) {
+                alert("Invalid date: format dd/mm/yyyy (1900-2016).");
+                return false;
+            }
+            alert("Valid Date of Birth!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend> <b>Date Of Birth </b></legend>
+   
+    <form name="myForm" onsubmit="return validateForm()">
+        <label for="dob"> (dd/mm/yyyy)</label><br><br>
+        <input type="text" id="dob" name="dob"><br><br>
+
+        <input type="submit" value="Submit">
+    </fieldset>
+    
+    </form>
+</body>
+</html>

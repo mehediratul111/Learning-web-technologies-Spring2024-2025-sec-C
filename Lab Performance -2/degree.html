@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hobbies Selection</title>
+    <script>
+        function validateForm() {
+            let hobbies = document.forms["myForm"]["hobbies"].value;
+            if (hobbies == "") {
+                alert("Please select at least one hobby.");
+                return false;
+            }
+            alert("Hobby selected: " + hobbies);
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Hobbies Selection</h2>
+    <form name="myForm" onsubmit="return validateForm()">
+        <input type="checkbox" name="hobbies" value="Reading"> Reading<br>
+        <input type="checkbox" name="hobbies" value="Sports"> Sports<br>
+        <input type="checkbox" name="hobbies" value="Music"> Music<br><br>
+        <input type="submit" value="Validate">
+    </form>
+</body>
+</html>
