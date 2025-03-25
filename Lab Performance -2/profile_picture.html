@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Invalid User ID");
+                return false;
+            }
+            if (!x.match(/^[A-Za-z][A-Za-z ]+$/) || x.split(" ").length < 2) {
+                alert("Invalid name");
+                return false;
+            }
+            alert("Valid name");
+            return true;
+        } 
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend> <b>Profile Picture </b></legend>
+   
+        <form name="myForm" onsubmit="return validateForm()">
+            <label for="fname">User ID </label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="fname">Picture  </label>
+            <input type="file" id="picture" name="picture"> <br><br>
+        </fieldset><br>
+        <input type="submit" value="Submit">
+        </form>
+</body>
+</html>
