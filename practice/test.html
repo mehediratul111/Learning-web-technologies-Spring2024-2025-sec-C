@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Simple Calculator</title>
 </head>
-<body id="page-container">
-    <nav class="navbar">
-        <a href="addproduct.html">Add Product</a>
-        <a href="delete.html">Delete</a>
-        <a href="display.html">Display</a>
-        <a href="editprice.html">Edit Price</a>
-        <a href="search.html">Search</a>
-    </nav>
+<body>
 
-    <form action="Login.html" class="form-box">
-        <h2 id="home-title">Home Page</h2><br><br>
-        <h3>About</h3>
-        <p>Name: MD Mehedi Hasan Ratul</p>
-        <p>ID: 21-45007-2</p>
-        <p>Department: CSE</p>
-        <p>Address: Dhaka</p>
-        <input type="submit" value="Logout">
-    </form>
+<h2>Simple Calculator</h2>
+
+<input type="text" id="num1" placeholder="First number">
+<br><br>
+<input type="text" id="num2" placeholder="Second number">
+<br><br>
+
+<button onclick="add()">Add</button>
+<button onclick="subtract()">Subtract</button>
+<button onclick="multiply()">Multiply</button>
+<button onclick="divide()">Divide</button>
+
+<p id="result"></p>
+
+<!-- Link to the external JS file -->
+<script src="script.js"></script>
+
 </body>
 </html>
